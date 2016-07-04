@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0;}
+	.wrap{width: 1287px;height: 1250px;border:1px solid black;margin: 20px auto;}
+	.header{height: 58px;background: black;color: white;}
+	.header_left{font-size: 30px;font-weight: bolder;line-height: 58px;float: left;margin-left: 50px;}
+	.header_middle{float: left;line-height: 58px;}
+	.header_middle span{margin-left: 20px;}
+	.header_right{float: right;line-height: 58px;margin-right: 70px;}
+	.header_right span{margin-right: 20px;}
+	.content{height: 500px;width: 1287px; background: green;position: relative;}
+	.content .main{height: 500px;width: 1287px;overflow: hidden;}
+	.content .pic{height: 500px;width: 9009px;}
+	.content .pic img{float: left;height: 500px;width: 1287px;}
+	.content .left_right .content_left{font-size: 80px;font-weight: bolder;color: white; position: absolute;left: 10px;top: 200px;cursor: pointer;}
+	.content .left_right .content_right{font-size: 80px;font-weight: bolder;color: white; position: absolute;right: 10px;top: 200px;cursor: pointer;}
+	.content_middle{width: 600px;height: 20px; position: absolute;left: 350px;top: 400px;}
+	.content_middle span{width: 80px;height: 15px;border:1px solid black;background: blue;border-radius: 20px;display: inline-block;text-align: center;line-height: 15px;cursor: pointer;}
+	.content_middle .select{background: red;}
+	.footer_top{width: 1287px;height: 90px;line-height: 90px;margin-left: 50px;}
+	.footer_top span{margin-left: 20px;}
+	.footer_content div{width: 360px;height: 300px;float: left;margin-left: 50px;text-align: center;position: relative;cursor: pointer;overflow: hidden;/*这里不错*/
+	}
+	.footer_content p{width: 360px;height: 235px;position: absolute;left: 0;top: 0;font-size: 26px;color: white;background: rgba(0,0,0,0.5);opacity: 0;transition:0.6s linear;line-height: 260px;/*cursor: pointer;*/}
+
+	.footer_content div:hover p{opacity: 1;/*cursor: pointer;*/line-height: 235px;}
+	.footer_content div:hover strong{opacity: 1;}
+	.footer_content div:hover .left_line{animation:move1 0.6s linear 0.1s forwards;}
+	.footer_content div:hover .right_line{animation:move2 0.6s linear 0.1s forwards;}
+	.footer_content img{width: 360px;height: 235px;}
+	.footer_content span{width: 360px;/*height: 75px;*/line-height: 60px;/*text-align: center;margin: auto;*/}
+	/*.footer_content strong{width: 360px;height: 235px;position: absolute;left: 0;top: 0;line-height: 235px;color: white;font-size: 30px;opacity: 0;transition:1s;}*/
+	.footer_content .left_line{width: 180px;height: 235px;position: absolute;left: 0;top: 0;line-height: 200px;color: white;font-size: 30px;opacity: 1;transition:1s ;}
+	.footer_content .right_line{width: 540px;height: 235px;position: absolute;left: 0;top: 0;line-height: 200px;color: white;font-size: 30px;opacity: 1;transition:1s ;}
+
+	@keyframes move1
+	{
+		from{width: 180px;line-height: 200px;}
+		to{width: 240px;line-height: 235px;}
+	}
+	@keyframes move2
+	{
+		from{width: 540px;line-height: 200px;}
+		to{width: 480px;line-height: 235px;}
+	}
+	
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="header_left">ZEALER</div>
+			<div class="header_middle">
+				<span>首页</span>
+				<span>视频</span>
+				<span>手机BeTa</span>
+				<span>社区</span>
+				<span>维修</span>
+				<span>实验室</span>
+				<span>联系我们</span>
+				<span>APP下载</span>
+			</div>
+			<div class="header_right">
+				<span>登陆</span>
+				<span>注册</span>
+			</div>
+		</div>
+		<div class="content">
+			<div class="left_right" id="left_right">
+				<div class="content_left" id="content_left"><</div>
+				<div class="content_right" id="content_right">></div>
+			</div>
+			<div class="main" id="main">
+				<div class="pic" id="pic">
+				<img src="images/1.jpg" alt="">
+				<img src="images/2.jpg" alt="">
+				<img src="images/3.jpg" alt="">
+				<img src="images/4.jpg" alt="">
+				<img src="images/5.jpg" alt="">
+				<img src="images/6.jpg" alt="">
+				<img src="images/1.jpg" alt="">
+			</div>
+			</div>
+			
+			<div class="content_middle" id="content_middle">
+				<span class="select">1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+				<span>6</span>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer_top">
+				<strong>ZEALER出品</strong>
+				<span>硬件测评</span>
+				<span>搞件教程</span>
+				<span>脱口秀</span>
+				<span>人物专访</span>
+				<span>官方拆解</span>
+				<span>FIX小知识</span>
+				<span>ZEALER那些事</span>
+				<span>全部</span>
+			</div>
+			<div class="footer_content">
+				<div>
+				<p>播放</p><img src="images/1.jpg">
+				<span>总是丢三落四？试试只能防丢器</span>
+				<strong class="left_line">—</strong>
+				<strong class="right_line">—</strong>
+				</div>
+				<div><p>播放</p><img src="images/2.jpg">
+				<span>键帽染色，让键盘更出彩</span>
+				<strong class="left_line">—</strong>
+				<strong class="right_line">—</strong>
+				</div>
+				<div><p>播放</p><img src="images/3.jpg">
+				<span>三星Galaxy　S7|测评</span>
+				<strong class="left_line">—</strong>
+				<strong class="right_line">—</strong>
+				</div>
+				<div><p>播放</p><img src="images/4.jpg">
+				<span>续航几个月能让。。。</span>
+				<strong class="left_line">—</strong>
+				<strong class="right_line">—</strong>
+				</div>
+				<div><p>播放</p><img src="images/5.jpg">
+				<span>做饭高手——什么事HI电饭煲</span>
+				<strong class="left_line">—</strong>
+				<strong class="right_line">—</strong>
+				</div>
+				<div><p>播放</p><img src="images/6.jpg">
+				<span>带你一分钟看完PRO6 发布</span>
+				<strong class="left_line">—</strong>
+				<strong class="right_line">—</strong>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload=clock();
+	var main=document.getElementById("main");
+	console.log(main)
+	var pic=document.getElementById("pic");
+	console.log(pic)
+	var imgs=pic.getElementsByTagName('img');
+	console.log(imgs)
+	var spans=document.getElementById("content_middle").getElementsByTagName('span')
+	console.log(spans)
+	var lr=document.getElementById("left_right");
+	console.log(lr)
+	var lrs=lr.getElementsByTagName('div');
+	console.log(lrs)
+	var time;
+	var time2;
+	var startPos;
+	var endPos;
+	var autoNum=0;
+	function moveTo(startPos,endPos){
+		var step=0;
+		var startPos=startPos;
+		var endPos=endPos;
+		var stepMax=15;
+		var everyStep=(endPos-startPos)/stepMax;
+
+		if (time) {
+			clearInterval(time);
+		};
+		function move(){
+			step++;
+			main.scrollLeft+=everyStep;
+			if (step==stepMax) {
+				clearInterval(time);
+				main.scrollLeft=endPos;
+				// 防止有小数除不尽
+			}
+		}
+		time=setInterval(move, 30)
+	}
+
+	// moveTo(0, 1920);
+	function autoMove(){
+		autoNum++;
+		if (autoNum==imgs.length) {
+			autoNum=1;
+			main.scrollLeft=0;
+		}
+		spanColor();
+		moveTo(main.scrollLeft, autoNum*1287)
+
+	}
+
+	function clock(){
+		time2=setInterval(autoMove, 1500)
+	}
+
+	function spanColor(){
+		for (var i = 0; i < spans.length; i++) {
+			spans[i].className="";
+		}
+		   	bNum=autoNum;
+		if (bNum==spans.length) {
+			bNum=0;
+		}
+		spans[bNum].className="select";		
+	}
+	main.onmouseover=function(){
+		clearInterval(time2);
+	}
+	main.onmouseout=function(){
+		// clearInterval(time2)
+		// autoMove();
+		clock();
+	}
+
+
+	lrs[0].onclick=function(){
+		clearInterval(time2);
+		autoNum-=2;
+		if (autoNum==-2) {
+			autoNum=4;
+		}
+		
+		autoMove();
+		clock();
+	}
+	lrs[1].onclick=function(){
+		clearInterval(time2);
+		autoMove();
+		clock();
+	}
+
+	for (var j = 0; j < spans.length; j++) {
+		spans[j].onclick=function(){
+			for (var k = 0; k < spans.length; k++) {
+					if (spans[k]==this) {
+						autoNum=k-1;
+						clearInterval(time2)
+						autoMove();
+						clock();
+				}
+			}
+		}
+	}
+
+</script>
+</html>
+
